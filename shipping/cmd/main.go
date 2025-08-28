@@ -9,7 +9,7 @@ import (
     "google.golang.org/grpc"
     "google.golang.org/grpc/reflection"
 
-    shippingpb "github.com/brianrafs/microservices-proto/golang/shipping"
+    shippingpb "github.com/brianrafs/microservices-protofinal/golang/shipping"
 )
 
 type ShippingServer struct {

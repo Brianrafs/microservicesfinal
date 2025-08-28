@@ -3,11 +3,11 @@ package main
 import (
 	"log"
 
-	"github.com/brianrafs/microservices/order/config"
-	"github.com/brianrafs/microservices/order/internal/adapters/db"
-	"github.com/brianrafs/microservices/order/internal/adapters/grpc"
-	payment_adapter "github.com/brianrafs/microservices/order/internal/adapters/payment"
-	"github.com/brianrafs/microservices/order/internal/application/core/api"
+	"github.com/brianrafs/microservicesfinal/order/config"
+	"github.com/brianrafs/microservicesfinal/order/internal/adapters/db"
+	"github.com/brianrafs/microservicesfinal/order/internal/adapters/grpc"
+	payment_adapter "github.com/brianrafs/microservicesfinal/order/internal/adapters/payment"
+	"github.com/brianrafs/microservicesfinal/order/internal/application/core/api"
 )
 
 func main() {

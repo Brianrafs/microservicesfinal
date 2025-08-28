@@ -3,8 +3,8 @@ package api
 import (
 	"context"
 
-	"github.com/brianrafs/microservices/order/internal/application/core/domain"
-	"github.com/brianrafs/microservices/order/internal/ports"
+	"github.com/brianrafs/microservicesfinal/order/internal/application/core/domain"
+	"github.com/brianrafs/microservicesfinal/order/internal/ports"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

@@ -9,7 +9,7 @@ import (
     "google.golang.org/grpc"
     "google.golang.org/grpc/credentials/insecure"
 
-    shippingpb "github.com/brianrafs/microservices-proto/golang/shipping"
+    shippingpb "github.com/brianrafs/microservices-protofinal/golang/shipping"
 )
 
 type ShippingClient struct {

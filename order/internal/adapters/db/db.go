@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/brianrafs/microservices/order/internal/application/core/domain"
+	"github.com/brianrafs/microservicesfinal/order/internal/application/core/domain"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

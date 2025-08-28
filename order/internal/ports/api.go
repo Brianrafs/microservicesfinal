@@ -3,7 +3,7 @@ package ports
 import (
 	"context"
 
-	"github.com/brianrafs/microservices/order/internal/application/core/domain"
+	"github.com/brianrafs/microservicesfinal/order/internal/application/core/domain"
 )
 
 // ApplicationPort define os métodos que o Adapter gRPC do Order precisa
