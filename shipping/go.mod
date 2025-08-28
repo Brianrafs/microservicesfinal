@@ -1,11 +1,10 @@
 module github.com/brianrafs/microservicesfinal/shipping
 
-go 1.23.0
+go 1.24
 
-toolchain go1.24.3
 
 require (
-	github.com/brianrafs/microservices-protofinal/golang/shipping v0.1.0
+	github.com/brianrafs/microservices-protofinal v0.1.1
 	google.golang.org/grpc v1.75.0
 	google.golang.org/protobuf v1.36.6
 )
@@ -17,4 +16,4 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250707201910-8d1bb00bc6a7 // indirect
 )
 
-replace github.com/brianrafs/microservices-protofinal/golang/shipping => ../../microservices-proto/golang/shipping
+replace github.com/brianrafs/microservices-protofinal => ../../microservices-protofinal

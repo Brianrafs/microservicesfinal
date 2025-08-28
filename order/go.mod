@@ -3,7 +3,7 @@ module github.com/brianrafs //order
 go 1.24.3
 
 require (
-	github.com/brianrafs/-proto/golang/order v0.0.0-00010101000000-000000000000
+	github.com/brianrafs/microservices-protofinal/golang/order v0.1.1
 	google.golang.org/grpc v1.74.2
 )
 
@@ -24,11 +24,13 @@ require (
 	gorm.io/gorm v1.30.1
 )
 
-replace github.com/brianrafs/-proto/golang/order => ../../-proto/golang/order
+
 
 require (
-	github.com/brianrafs/-proto/golang/payment v0.0.0-00010101000000-000000000000
+	github.com/brianrafs/microservices-protofinal/golang/payment v0.1.1
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0
 )
 
-replace github.com/brianrafs/-proto/golang/payment => ../../-proto/golang/payment
+replace github.com/brianrafs/microservices-protofinal/golang/payment => /app/microservices-protofinal/golang/payment
+replace github.com/brianrafs/microservices-protofinal/golang/order => /app/microservices-protofinal/golang/order
+
