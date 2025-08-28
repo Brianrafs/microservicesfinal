@@ -1,36 +1,46 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml
+    kompose.version: 1.37.0 (fb0539e64)
+  labels:
+    io.kompose.service: mysql
   name: mysql
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: mysql
-  replicas: 1
+      io.kompose.service: mysql
   template:
     metadata:
+      annotations:
+        kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml
+        kompose.version: 1.37.0 (fb0539e64)
       labels:
-        app: mysql
+        io.kompose.service: mysql
     spec:
       containers:
-      - name: mysql
-        image: mysql:8.0
-        envFrom:
-        - secretRef:
-            name: mysql-secret
-        ports:
-        - containerPort: 3306
-        volumeMounts:
-        - name: mysql-storage
-          mountPath: /var/lib/mysql
-        resources:
-          requests:
-            memory: "512Mi"
-            cpu: "500m"
-          limits:
-            memory: "1Gi"
-            cpu: "1"
-      volumes:
-      - name: mysql-storage
-        persistentVolumeClaim:
-          claimName: mysql-pvc
+        - env:
+            - name: MYSQL_DATABASE
+              value: order
+            - name: MYSQL_ROOT_PASSWORD
+              value: minhasenha
+          image: mysql:8.0
+          livenessProbe:
+            exec:
+              command:
+                - mysqladmin
+                - ping
+                - -h
+                - 127.0.0.1
+                - -uroot
+                - -pminhasenha
+            failureThreshold: 20
+            periodSeconds: 5
+            timeoutSeconds: 5
+          name: mysql
+          ports:
+            - containerPort: 3306
+              protocol: TCP
+      restartPolicy: Always

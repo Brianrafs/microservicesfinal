@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	pbPayment "github.com/brianrafs/microservices-protofinal/golang/payment/payment"
+	pbPayment "github.com/brianrafs/microservices-protofinal/golang/payment"
 	grpc_retry "github.com/grpc-ecosystem/go-grpc-middleware/retry"
 	"github.com/brianrafs/microservicesfinal/order/internal/application/core/domain"
 	"google.golang.org/grpc"

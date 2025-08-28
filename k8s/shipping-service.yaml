@@ -1,11 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml
+    kompose.version: 1.37.0 (fb0539e64)
+  labels:
+    io.kompose.service: shipping
   name: shipping
 spec:
-  type: ClusterIP
   ports:
-    - port: 50052
+    - name: "50052"
+      port: 50052
       targetPort: 50052
   selector:
-    app: shipping
+    io.kompose.service: shipping
