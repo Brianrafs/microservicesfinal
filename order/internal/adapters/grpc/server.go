@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/brianrafs/microservicesfinal-proto/golang/order"
+	"github.com/brianrafs/microservices-protofinal/golang/order"
 	"github.com/brianrafs/microservicesfinal/order/config"
 	"github.com/brianrafs/microservicesfinal/order/internal/application/core/domain"
 	"github.com/brianrafs/microservicesfinal/order/internal/ports"

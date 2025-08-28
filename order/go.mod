@@ -1,4 +1,4 @@
-module github.com/brianrafs //order
+module github.com/brianrafs/microservicesfinal/order //order
 
 go 1.24.3
 
@@ -31,6 +31,6 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0
 )
 
-replace github.com/brianrafs/microservices-protofinal/golang/payment => /app/microservices-protofinal/golang/payment
-replace github.com/brianrafs/microservices-protofinal/golang/order => /app/microservices-protofinal/golang/order
+replace github.com/brianrafs/microservices-protofinal/golang/payment => ../../microservices-protofinal/golang/payment
+replace github.com/brianrafs/microservices-protofinal/golang/order => ../../microservices-protofinal/golang/order
 
